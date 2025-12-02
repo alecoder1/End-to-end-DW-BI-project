@@ -25,7 +25,7 @@ UPDATE DIMSTORE SET STOREOPENINGDATE = DATEADD(DAY, UNIFORM(0, 360, RANDOM()), '
 
 -- 3. Update the customer table so that all customers are atleast 12 year old.
 -- Any customer that is less than 12 years old.
--- Substract 12 years fro their DOB.
+-- Substract 12 years from their DOB.
 
 SELECT * FROM DIMCUSTOMER WHERE DATEOFBIRTH >= DATEADD(YEAR, -10, CURRENT_DATE);
 SELECT DATEADD(YEAR, -12, CURRENT_DATE);
